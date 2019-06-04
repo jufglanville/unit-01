@@ -1,6 +1,6 @@
-#Front End Web Developer Techdegree
+# Front End Web Developer Techdegree
 
-#Unit 1
+## Unit 1
 
 
 This project has been tested on the following:
