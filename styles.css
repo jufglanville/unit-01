@@ -249,6 +249,10 @@ a.social:hover {
   text-decoration: underline;
 }
 
+.timelineImage {
+  height: 80px;
+  width: 80px;
+}
 
 
 /* Styles for larger screens */
