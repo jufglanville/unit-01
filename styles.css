@@ -8,14 +8,35 @@ body {
   padding: 0;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  color: #222;
-  background: #f7f5f0;
+  color: rgb(0, 0, 0);
+  background: rgb(220, 232, 240);
 }
+
+h2 {
+  font-family: 'Tangerine', cursive;
+  font-size: 3rem;
+  margin: 10px 0 25px 0;
+}
+
+h2:hover {
+  font-size: 4rem;
+  transition: all 0.5s;
+}
+
+h3 {
+  font-family: 'Tangerine', cursive;
+  font-size: 1.5rem;
+  margin: 10px 0 25px 0;
+}
+
+
+
+
 /* Link Styles */
 
 a {
   text-decoration: none;
-  color: #999;
+  color: #535361;
 }
 a:hover {
   color: #6633ff;
@@ -25,12 +46,14 @@ a:hover {
 
 .main-nav {
   width: 100%;
-  background: black;
   min-height: 30px;
   padding: 10px;
   position: fixed;
   text-align: center;
+  /*Looked up on w3school.com (https://www.w3schools.com/css/css3_gradients.asp)*/
+  background-image: linear-gradient(to bottom, rgba(220,232,240,1), rgba(220,232,240,0.1));
 }
+
 .nav {
   display: flex;
   justify-content: space-around;
@@ -43,8 +66,15 @@ a:hover {
 .nav .name {
     display: block;
     margin-right: auto;
-    color: white;
+    color: #535361;
 }
+.nav .name:hover {
+  color: #0399ff;
+  transition: all 0.5s;
+  padding: 30px 0;
+  transform: scale(1.2) rotate(-25deg);
+}
+
 .nav li {
   padding: 5px 10px 10px 10px;
 }
@@ -52,54 +82,67 @@ a:hover {
   transition: all .5s;
 }
 .nav a:hover {
-  color: white
+  color: #dbd4d3;
 }
 
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url('images/ascot3.jpg') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
-  padding-top: 60px;
+  padding-top: 100px;
 }
 header {
   line-height: 1.5;
 }
 header .profile-image {
-  margin-top: 50px;
+  margin-top: 30px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 3px solid rgba(255,255,255,0.8);
   transition: all .5s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2) rotate(360deg);
 }
 .tag {
-  background-color: #efefef;
-  color: black;
-  padding: 10px;
-  border-radius: 5px;
+  /*Looked up on w3school (https://www.w3schools.com/css/css3_gradients.asp)*/
+  background-image: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0));
+  color: #dbd4d3;
+  padding: 0px 10px;
+  border-radius: 50%;
   display: table;
-  margin: 10px auto;
+  margin: 30px auto;
+  font-family: 'Tangerine', cursive;
+  font-size: 5rem;
 } 
-.location {
-  background-color: #222;
-  color: yellow;
+
+.tag:hover, .location:hover {
+  transition: all .5s;
+  transform: scale(1.3);
 }
+
+.location {
+  font-size: 3rem;
+}
+
 .card {
   margin: 30px;
   padding: 20px 40px 40px;
   max-width: 500px;
-  text-align: left;
-  background: #fff;
+  text-align: justify;
+  background: #cad9e4;
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
   transition: all .5s;
 }
 .card:hover {
-  border-color: #ff99ff;
+  border-color: rgb(70,147,198);
+}
+
+.aboutCard {
+  margin-top: 80px;
 }
 
 ul.skills {
@@ -110,20 +153,32 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
+  background: rgb(70,147,198);
   color: white;
   padding: 5px 10px;
   margin: 2px;
 }
 
+.skills li:hover {
+  background: rgb(76, 213, 255);
+  color: #535361;
+  transition: all 0.5s;
+}
+
 .skills li:nth-child(odd) {
-  background: #0399ff;
+  background: rgb(108,160,29);
+}
+
+.skills li:nth-child(odd):hover {
+  background: rgb(138, 223, 11);
+  color: #535361;
+  transition: all 0.5s;
 }
 
 footer {
   width: 100%;
   min-height: 30px;
-  padding: 20px 0 40px 20px;
+  padding: 20px 0 40px 0;
 }
 
 footer .copyright {
@@ -144,15 +199,12 @@ footer ul li {
 a.social {
   display: inline-block;
   text-indent: -9999px;
-  margin-left: 5px;
+  margin: 0 5px;
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
   opacity: .4;
   transition: all .5s;
-}
-a.twitter {
-  background-image: url(images/twitter.svg);
 }
 a.linkedin {
   background-image: url(images/linkedin.svg);
@@ -166,6 +218,43 @@ a.social:hover {
 .clearfix {
   clear: both;
 }
+
+.timeline {
+  padding: 80px 0;
+  background: #cad9e4;
+  margin: 0 100px;
+  border-radius: 2%;
+}
+
+.leftTimeline {
+  width: 50%;
+  padding-right: 4%;
+  text-align: right;
+  border-right: 1px dashed white;
+}
+
+.rightTimeline {
+  width: 50%;
+  margin-left: 50%;
+  border-left: 1px dashed white;
+  padding-left: 4%;
+  text-align: left;
+}
+
+.rightTimeline p {
+  margin-right: 10px;
+}
+
+.leftTimeline p {
+  margin-left: 10px;
+}
+
+.timeline h3 {
+  margin: 30px 0 0 0;
+  text-decoration: underline;
+}
+
+
 
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
